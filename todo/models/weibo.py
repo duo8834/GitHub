@@ -2,7 +2,7 @@ from models import Model
 from models.user import User
 
 
-# 微博类
+
 class Weibo(Model):
     def __init__(self, form, user_id=-1):
         self.id = form.get('id', None)
@@ -16,7 +16,6 @@ class Weibo(Model):
         return Comment.find_all(weibo_id=self.id)
 
 
-# 评论类
 class Comment(Model):
     def __init__(self, form, user_id=-1):
         self.id = form.get('id', None)
